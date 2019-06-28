@@ -5,13 +5,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(kotlin("gradle-plugin", "1.3.30"))
+        classpath(kotlin("gradle-plugin", "1.3.40"))
     }
 }
 
 plugins {
     application
-    kotlin("jvm") version "1.3.30"
+    kotlin("jvm") version "1.3.40"
     id("com.github.johnrengelman.shadow") version "5.0.0"
 }
 
@@ -40,11 +40,12 @@ tasks.withType<Jar> {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("io.ktor:ktor-server-core:1.1.4")
-    implementation("io.ktor:ktor-server-jetty:1.1.4")
-    implementation("io.ktor:ktor-jackson:1.1.4")
-    implementation("org.jetbrains.exposed:exposed:0.12.2")
-    implementation("org.koin:koin-ktor:1.0.2")
+    implementation("io.ktor:ktor-server-core:1.2.2")
+    implementation("io.ktor:ktor-server-jetty:1.2.2")
+    implementation("io.ktor:ktor-jackson:1.2.2")
+    implementation("org.jetbrains.exposed:exposed:0.14.1")
+    implementation("org.koin:koin-ktor:2.0.1")
+    implementation("org.koin:koin-logger-slf4j:2.0.1")
     implementation("com.zaxxer:HikariCP:3.3.0")
     implementation("org.slf4j:slf4j-simple:1.7.25")
     implementation("org.postgresql:postgresql:42.2.5")

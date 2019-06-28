@@ -3,7 +3,7 @@ package io.github.wellingtoncosta.ktor.sample.app.config
 import io.github.wellingtoncosta.ktor.sample.domain.repository.UserRepository
 import io.github.wellingtoncosta.ktor.sample.domain.service.UserService
 import io.github.wellingtoncosta.ktor.sample.resources.repository.UserDatabaseRepository
-import org.koin.dsl.module.module
+import org.koin.dsl.module
 
 /**
  * @author Wellington Costa

@@ -13,6 +13,8 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.jackson.jackson
 import io.ktor.response.respond
 import io.ktor.routing.Routing
+import org.koin.Logger.SLF4JLogger
+import org.koin.ktor.ext.Koin
 
 /**
  * @author Wellington Costa
@@ -23,6 +25,10 @@ fun Application.main() {
     install(DefaultHeaders)
     install(Compression)
     install(CallLogging)
+    install(Koin) {
+        SLF4JLogger()
+        modules(appModules)
+    }
     install(Routing) { UserRouter.register(this) }
     install(ContentNegotiation) { configureJackson() }
 }
